@@ -26,7 +26,7 @@ app.use('/', express.static(path.join(__dirname, 'public')))
 app.use(cors())
 
 const corsOption = {
-  origin: 'https://top-ten-one.vercel.app/', // Replace with your frontend domain
+  origin: 'https://top-ten-one.vercel.app', // Replace with your frontend domain
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 };
@@ -34,7 +34,7 @@ const corsOption = {
 app.use(cors(corsOption));
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://top-ten-one.vercel.app/'); // Replace with your allowed origin(s)
+  res.header('Access-Control-Allow-Origin', 'https://top-ten-one.vercel.app'); // Replace with your allowed origin(s)
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   next();
